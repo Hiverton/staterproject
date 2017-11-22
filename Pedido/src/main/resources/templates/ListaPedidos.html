@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+			xmlns:th="http://www.thymeleaf.org">
+			
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+
+<title>Cadastro de Pedido</title>
+
+</head>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery.dataTables.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="datatable.min.css" />
+	
+	<script>
+		$(document).ready(function(){
+		    $('#lista_pedidos').dataTable({bFilter: true,bLengthChange: false,bPaginate: true, sPaginationType: "full_numbers","orderable": false});
+		});
+		
+		function novo(){
+			$("#formulario").attr("action","/Pedido/pedidos/cadastro/novo");
+			$("#formulario").submit();
+		}
+		
+		function transportadora(){
+			window.open("/Pedido/transportadoras","_blank", "width=600,height=400,scrollbars=no,resizable=no", true);
+		}
+		
+		function carregarArquivo(){
+			window.open("/Pedido/upload","_blank", "width=600,height=400,scrollbars=no,resizable=no", true);
+		}
+		
+		function salvarLista(){
+			$("#formulario").attr("action","/Pedido/pedidos");
+			$("#formulario").submit();
+		}
+		
+		function salvarAJAX(){
+			
+			var params = $("#formulario").serialize();
+
+			var retFunction = function(response){
+				var data = JSON.parse(response);
+				
+				var t = $('#lista_pedidos').DataTable();
+				$('#lista_pedidos').dataTable().fnClearTable();
+				for(var i in data.LISTA_PEDIDOS){
+					var obj = data.LISTA_PEDIDOS[i];
+					
+				    $('#lista_pedidos').dataTable().fnAddData(['<a href="/Pedido/pedidos/cadastro/'+obj.ID_CONTRATO+'">Editar</a>'
+				    	                             		    ,obj.TIPO_PEDIDO
+				    	                             		    ,'2','3','4',' ',' ',' ',' ',' '
+				    	                             		  ]);		
+				    
+				}
+				
+			};
+
+			$.post("/Pedido/pedidos/saveajax", params ,retFunction, 'text');
+		}
+		
+	</script>
+	<body>
+		<div th:replace="Template :: cabecalho"></div>
+		<div>
+			<h2>Lista de pedidos</h2>
+			<!-- <a href="Pedido/pedidos/cadastro/'+data.idContrato+'>Editar</a> -->
+			<form id="formulario" class="form-inline" method="POST" style="margin: 20px 0" th:object="${pedido}">
+			
+				 <input type="text" class="form-control" placeholder="" th:field="*{numPeriodo}" />
+				 <input type="text" class="form-control"  placeholder="" th:field="*{idContrato}" />
+				 <input type="text" class="form-control"  placeholder="" th:field="*{indTipoPedido}" />
+				 
+				<table id="lista_pedidos">
+					<thead>
+						<tr>
+							<td></td>
+							<td>Contrato</td>
+							<td>Tipo de Contrato</td>
+							<td>Período</td>
+							<td>1º Ano</td>
+							<td>2º Ano</td>
+							<td>3º Ano</td>
+							<td>4º Ano</td>
+							<td>5º Ano</td>
+							<td>Alunos novos</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="pedido : ${listaPedido}"> 
+							<td><a th:href="@{pedidos/cadastro/__${pedido.idContrato}__}">Editar</a></td>
+							<td th:text="${pedido.idContrato}"></td>
+							<td th:text="${pedido.indTipoPedido}"></td>
+							<td th:text="${pedido.numPeriodo}"></td>
+							<td th:text="${pedido.primeiroAno}"></td>
+							<td th:text="${pedido.segundoAno}"></td>
+							<td th:text="${pedido.terceiroAno}"></td>
+							<td th:text="${pedido.quartoAno}"></td>
+							<td th:text="${pedido.quintoAno}"></td>
+							<td ><input type="text" class="form-control" placeholder="" th:name="alunos_novos__${pedido.idContrato}__" /></td>
+						</tr>
+					</tbody>
+				</table>
+			
+				<input type="button" onclick="novo();" value="Novo pedido" />
+				
+				<input type="button" onclick="transportadora();" value="Transportadora" th:if="${transportadora==true}" />
+				
+				<input type="button" onclick="carregarArquivo();" value="Carregar arquivo" />
+				
+				<input type="button" onclick="salvarLista();" value="Atualizar" />
+			
+				<input type="button" onclick="salvarAJAX();" value="ajax" />
+			
+			</form>
+		</div>
+		<div th:replace="Template :: rodape"></div>
+	</body>
+</html>

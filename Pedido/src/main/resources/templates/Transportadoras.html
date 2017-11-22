@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+			xmlns:th="http://www.thymeleaf.org">
+	<head></head>
+	<body>
+		<h2>Lista de transportadoras</h2>
+		<select name="nom_transportadora">
+			<option value="">Selecione...</option>
+			<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+		</select>
+	</body>
+</html>

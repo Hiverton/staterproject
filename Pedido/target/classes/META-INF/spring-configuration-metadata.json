@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.hysoft.properties.StorageProperties",
+      "name": "storage",
+      "type": "com.hysoft.properties.StorageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.hysoft.properties.StorageProperties",
+      "name": "storage.location",
+      "type": "java.lang.String"
+    }
+  ]
+}
