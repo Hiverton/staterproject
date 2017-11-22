@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Cadastro de Pedido</title>
+
+</head>
+	<body>
+		<form class="form-inline" method="POST" style="margin: 20px 0" th:object="${pedido}" action="/Pedido/pedidos/cadastro" >
+			<div class="form-group">
+				Período : <input type="text" class="form-control" placeholder="" th:field="*{numPeriodo}" /><br />
+				Contrato: <input type="text" class="form-control"  placeholder="" th:field="*{idContrato}" /><br />
+				Tipo de contrato: <input type="text" class="form-control"  placeholder="" th:field="*{indTipoPedido}" /><br /><br />
+				1º Ano<input type="text" class="form-control"  placeholder="" th:field="*{primeiroAno}" /><br />
+				2º Ano<input type="text" class="form-control"  placeholder="" th:field="*{segundoAno}" /><br />
+				3º Ano<input type="text" class="form-control"  placeholder="" th:field="*{terceiroAno}" /><br />
+				4º Ano<input type="text" class="form-control"  placeholder="" th:field="*{quartoAno}" /><br />
+				5º Ano<input type="text" class="form-control" placeholder="" th:field="*{quintoAno}" /><br />
+				<button type="submit" class="btn btn-primary">Salvar</button>
+			</div>
+		</form>
+	</body>
+</html>
