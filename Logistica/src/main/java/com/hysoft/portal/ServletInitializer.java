@@ -1,8 +1,9 @@
 package com.hysoft.portal;
 
+import javax.servlet.Filter;
+
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import javax.servlet.Filter;
 
 public class ServletInitializer  extends AbstractAnnotationConfigDispatcherServletInitializer {
 

@@ -1,7 +1,7 @@
 package com.hysoft.portal.controller;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/transportadoras")
 public class TransportadoraController {
 
-	private static final List<String> LISTA_TRANSPORTADORAS = new ArrayList<String>();
+	private static final Set<String> LISTA_TRANSPORTADORAS = new TreeSet<String>();
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView cadastro() {

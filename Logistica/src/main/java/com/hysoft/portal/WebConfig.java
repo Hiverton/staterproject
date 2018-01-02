@@ -22,7 +22,7 @@ import com.hysoft.portal.controller.TransportadoraController;
 import nz.net.ultraq.thymeleaf.LayoutDialect;
 
 @Configuration
-@ComponentScan(basePackageClasses = { TransportadoraController.class })
+@ComponentScan(basePackageClasses = {TransportadoraController.class})
 @EnableWebMvc
 public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 
