@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="'layout/Template'">
+
+<head></head>
+
+<body>
+	<section layout:fragment="conteudo">
+		<div class="col-5">
+			<div class="form-group">
+				<span class="columnLong">Transportadoras 1</span>
+				<select name="nom_transportadora">
+					<option value="">Selecione...</option>
+					<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<span class="columnLong">Transportadoras 2</span>
+				<select name="nom_transportadora">
+					<option value="">Selecione...</option>
+					<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<span class="columnLong">Transportadoras 3</span>
+				<select name="nom_transportadora">
+					<option value="">Selecione...</option>
+					<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="col-5">
+			<div class="form-group">
+				<span class="columnLong">Transportadoras 4</span>
+				<select name="nom_transportadora">
+					<option value="">Selecione...</option>
+					<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<span class="columnLong">Transportadoras 5</span>
+				<select name="nom_transportadora">
+					<option value="">Selecione...</option>
+					<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<span class="columnLong">Transportadoras 6</span>
+				<select name="nom_transportadora">
+					<option value="">Selecione...</option>
+					<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<span class="columnLong">Transportadoras 7</span>
+				<select name="nom_transportadora">
+					<option value="">Selecione...</option>
+					<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="col-10">
+			<div class="form-group">
+				<span class="columnLong">Transportadoras 8</span>
+				<select name="nom_transportadora">
+					<option value="">Selecione...</option>
+					<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<span class="columnLong">Transportadoras 9</span>
+				<select name="nom_transportadora">
+					<option value="">Selecione...</option>
+					<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<span class="columnLong">Transportadoras 10</span>
+				<select name="nom_transportadora">
+					<option value="">Selecione...</option>
+					<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<span class="columnLong">Transportadoras 11</span>
+				<select name="nom_transportadora">
+					<option value="">Selecione...</option>
+					<option th:each="transportadora : ${listaTransportadoras}" th:value="${transportadora}" th:text="${transportadora}">Wireframe</option>
+				</select>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

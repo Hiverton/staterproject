@@ -1,0 +1,132 @@
+body { 
+	background : #ffffff;
+}
+
+br{
+	clear: both;
+}
+
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration:none;
+	color : #336ea3;
+	font-weight: normal;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+   float: left;
+}
+
+.js-content {
+	display: block;
+	background-color: #FFFFFF;
+	margin: auto;
+	border: 1px solid blue;
+	float: left;
+	padding: 15px 35px;
+}
+
+.form-group {
+	float: left;
+	padding: 2px;
+}
+
+.form-group label {
+	float: left;
+	font-weight: normal;
+	min-height: 23px;
+	margin-right: 5px;
+	margin-top: 2px;
+	white-space:  nowrap;
+	display: inline-block; 
+	border: 0px solid red;
+}
+
+.form-group span {
+	float:left;
+	font-weight: normal;
+	margin-right: 5px;
+	margin-top: 2px;
+	text-align:right;
+	border: 0px solid blue;
+}
+
+.form-group span.columnSmall {
+	width: 60px;	
+}
+
+.form-group span.columnMedium {
+	width: 90px;	
+}
+
+.form-group span.columnLong {
+	width: 120px;	
+}
+
+.aw-layout-footer {
+	float: left;
+	padding: 10px;
+}
+
+
+/*menu*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: inline-flex;
+    background-color: rgb(51, 110, 163, 0.6);
+    margin-bottom: 5px;
+    border-radius: 3px;
+    color: #FFFFFF;
+}
+
+li {
+    text-align: center;
+}
+
+li span, li a {
+    display: block;
+    width: 60px;
+    height: 100%;
+    color: white;	
+  	cursor: pointer;
+  	font-size: 12px;
+}
+
+li ul {
+	display: none;
+}
+
+li a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+}
+
+.sub-menu li a {
+	display: block;
+    width: 100px;
+    height: 100%;
+    color: white;	
+  	cursor: pointer;	
+}
