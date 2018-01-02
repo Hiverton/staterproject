@@ -1,4 +1,4 @@
-package com.hysoft.portal;
+package com.hysoft.portal.controller;
 
 import java.util.ArrayList;
 import java.util.List;
