@@ -13,7 +13,8 @@
 	<title>Logistica</title>
 
 	<link rel="stylesheet" type="text/css" th:href="@{/layout/css/application.css}"/>
-
+	<link rel="stylesheet" type="text/css" th:href="@{/layout/css/menu.css}"/>
+	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,57 +32,19 @@
 <body>
 
 <div class="col-12">
-	<nav class="navbar  navbar-fixed-top  navbar-default  js-sticky-reference" id="main-navbar">
-		<div class="container-fluid">
-
-	    <div class="navbar-header">
-	     	<ul>
-			  <li><span>Home</span></li>
-			  <li><span>News</span>
-			  	<ul class="sub-menu">
-			  		<li><a href="transportadoras">News 1</a></li>
-			  		<li><a href="transportadoras">News 2</a></li>
-			  		<li><a href="transportadoras">News 1</a></li>
-			  		<li><a href="transportadoras">News 2</a></li>	
-			  		<li><a href="transportadoras">News 1</a></li>
-			  		<li><a href="transportadoras">News 2</a></li>	
-			  		<li><a href="transportadoras">News 1</a></li>
-			  		<li><a href="transportadoras">News 2</a></li>	
-			  		<li><a href="transportadoras">News 1</a></li>
-			  		<li><a href="transportadoras">News 2</a></li>	
-			  	</ul>
-			  </li>
-			  <li><span>Contact</span>
-			  	<ul class="sub-menu">
-			  		<li><a href="transportadoras">About 1</a></li>
-			  		<li><a href="transportadoras">Contact 2</a></li>
-			  		<li><a href="transportadoras">Contact 1</a></li>
-			  		<li><a href="transportadoras">Contact 2</a></li>	
-			  		<li><a href="transportadoras">Contact 1</a></li>
-			  		<li><a href="transportadoras">Contact 2</a></li>	
-			  		<li><a href="transportadoras">Contact 1</a></li>
-			  		<li><a href="transportadoras">Contact 2</a></li>	
-			  		<li><a href="transportadoras">Contact 1</a></li>
-			  		<li><a href="transportadoras">Contact 2</a></li>	
-			  	</ul>
-			  </li>
-			  <li><span>About</span>
-			  	<ul class="sub-menu">
-			  		<li><a href="transportadoras">About 1</a></li>
-			  		<li><a href="transportadoras">About 2</a></li>
-			  		<li><a href="transportadoras">About 1</a></li>
-			  		<li><a href="transportadoras">About 2</a></li>	
-			  		<li><a href="transportadoras">About 1</a></li>
-			  		<li><a href="transportadoras">About 2</a></li>	
-			  		<li><a href="transportadoras">About 1</a></li>
-			  		<li><a href="transportadoras">About 2</a></li>	
-			  		<li><a href="transportadoras">About 1</a></li>
-			  		<li><a href="transportadoras">About 2</a></li>	
-			  	</ul>
-			  </li>
-			</ul>
-	    </div>
-	  </div>
+	<nav>
+		 <ul>
+		  <li><a href="#home">Home</a></li>
+		  <li><a href="#news">News</a></li>
+		  <li class="dropdown">
+		    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+		    <div class="dropdown-content">
+		      <a href="#">Link 1</a>
+		      <a href="#">Link 2</a>
+		      <a href="#">Link 3</a>
+		    </div>
+		  </li>
+		</ul>
 	</nav>
 	
 	<section class="aw-layout-content  js-content" layout:fragment="conteudo"></section>
