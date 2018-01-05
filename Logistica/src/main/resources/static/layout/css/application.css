@@ -36,9 +36,12 @@ br{
 	display: block;
 	background-color: #FFFFFF;
 	margin: auto;
-	border: 1px solid blue;
+	border: 0px solid #ff0080;
 	float: left;
-	padding: 15px 35px;
+	padding: 15px 0px;
+	min-height: 515px;
+	width: 99.8%;
+	margin: 0;
 }
 
 .form-group {
@@ -81,52 +84,4 @@ br{
 .aw-layout-footer {
 	float: left;
 	padding: 10px;
-}
-
-
-/*menu*/
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    display: inline-flex;
-    background-color: rgb(51, 110, 163, 0.6);
-    margin-bottom: 5px;
-    border-radius: 3px;
-    color: #FFFFFF;
-}
-
-li {
-    text-align: center;
-}
-
-li span, li a {
-    display: block;
-    width: 60px;
-    height: 100%;
-    color: white;	
-  	cursor: pointer;
-  	font-size: 12px;
-}
-
-li ul {
-	display: none;
-}
-
-li a:hover {
-    color: white;
-    font-weight: bold;
-}
-
-ul li:hover .sub-menu {
-  display: block;
-  position: absolute;
-}
-
-.sub-menu li a {
-	display: block;
-    width: 100px;
-    height: 100%;
-    color: white;	
-  	cursor: pointer;	
 }
