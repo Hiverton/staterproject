@@ -71,7 +71,12 @@
 	        <version>1.0</version>
 	        <scope>system</scope>
 	        <systemPath>C:\desenv\apache-tomcat-6.0.44\webapps\educmais\WEB-INF\lib\ojdbc6.jar</systemPath>
-        </dependency> 
+        </dependency>
+        
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 
 	</dependencies>
 	
