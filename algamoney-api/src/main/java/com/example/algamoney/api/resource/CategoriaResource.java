@@ -35,10 +35,6 @@ public class CategoriaResource {
 	
 	@GetMapping
 	public List<Categoria> listar(HttpServletResponse response) throws SQLException {
-		response.addHeader("Access-Control-Allow-Origin","*");
-		response.addHeader("Access-Control-Allow-Methods","GET,POST");
-		response.addHeader("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
-        
 		return categoriaRepository.findAll();
 	}
 

@@ -22,8 +22,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 			.withUser("admin").password("admin").roles("ROLE");
 	}
 
-	
-
 	@Override
 
 	public void configure(HttpSecurity http) throws Exception {
@@ -34,8 +32,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 			.csrf().disable();
 	}
-
-	
 
 	@Override
 	public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
